@@ -1,0 +1,7 @@
+{
+  "name": "ionic-modal-backdrop-dismiss",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
