@@ -28,6 +28,11 @@ export class HomePage {
       // Add the adaptable-modal class will give the modal a pop-up behaviour.
       // It'll have a full width by default so we also add the custom-size class as we need to avoid full-size.
       cssClass: 'adaptable-modal modal-xl'
+      // Multiple modal sizes
+      // cssClass: 'adaptable-modal modal-xs'
+      // cssClass: 'adaptable-modal modal-sm'
+      // cssClass: 'adaptable-modal modal-md'
+      // cssClass: 'adaptable-modal modal-lg'
     });
     await modal.present();
   }
@@ -42,7 +47,7 @@ export class HomePage {
       cssClass: 'adaptable-modal bottom-drawer',
       swipeToClose: true,
       backdropDismiss: false,
-      mode: 'ios', // fix the mode to ios will be mandatory due by material design behavior has not swip to close modals
+      mode: 'ios', // ios mode will be mandatory due by material design behavior has not swip to close modals
     });
     await modal.present();
   }
