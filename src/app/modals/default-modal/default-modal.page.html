@@ -1,0 +1,27 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title size="large">Modal page</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-text>Default modal</ion-text>
+    <p>It works in full screen as default (expected). We are not adding any value to the cssClass property when create
+      the modal</p>
+  </div>
+</ion-content>
+
+<!-- Can use without ion-content or ion-header 👍 -->
+
+<!-- <div class="ion-padding">
+  <h3>
+    <ion-text>Default modal</ion-text>
+  </h3>
+  <ion-button (click)="dismiss()">Close modal</ion-button>
+</div> -->

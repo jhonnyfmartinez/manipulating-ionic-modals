@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'default-modal',
+    loadChildren: () => import('./modals/default-modal/default-modal.module').then( m => m.DefaultModalPageModule)
+  },
+  {
+    path: 'pop-up',
+    loadChildren: () => import('./modals/pop-up/pop-up.module').then( m => m.PopUpPageModule)
+  },
+  {
+    path: 'bottom-drawer',
+    loadChildren: () => import('./modals/bottom-drawer/bottom-drawer.module').then( m => m.BottomDrawerPageModule)
+  },
 ];
 
 @NgModule({
