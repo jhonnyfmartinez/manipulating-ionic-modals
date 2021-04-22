@@ -1,9 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>pop-up</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<div class="ion-text-center">
+  <div class="header">
+    <img height="auto" width="100%" src="assets/illustrations/shapes.svg" alt="Header">
+  </div>
+  <div class="content ion-padding">
+    <ion-text color="primary">
+      <h3 class="ion-no-margin">This is a pop-up modal.</h3>
+    </ion-text>
+    <ion-text color="dark">
+      <p>You can use to alert or give some quickly information.</p>
+    </ion-text>
+    <ion-button (click)="dismiss()">Got it!</ion-button>
+  </div>
+</div>
