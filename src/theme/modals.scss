@@ -1,46 +1,127 @@
 /* Modal classes */
 
-// iOS force an extra div element with the classes below next to the ion-backdrop component, so we hide this div to enable the click on the backdrop
-.modal-shadow.sc-ion-modal-ios {
-  display: none;
+// Globally wrap the custom modal classes inside de ion-modal component selector to avoid affect another elements inside the app
+ion-modal {
+  // iOS force an extra div element with the classes below next to the ion-backdrop component, so we hide this div to enable the click on the backdrop
+  .modal-shadow.sc-ion-modal-ios {
+    display: none;
+  }
+  // Ionic only add the backdrop-opacity property to the first backdrop present in the whole DOM, we force it to add the opacity in every single ion-backdrop component
+  ion-backdrop {
+    // Use the default backdrop opacity value, given by Ionic styles.
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+  }
+  @media only screen and (min-width: 768px) and (min-height: 768px) {
+    --height: 100% !important;
+    --width: 100% !important;
+    .modal-wrapper {
+      --max-height: unset;
+      --max-width: unset;
+    }
+  }
 }
 
-// Ionic only add the backdrop-opacity property to the first backdrop present in the whole DOM, we force it to add the opacity in every single ion-backdrop component
-ion-backdrop {
-  --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+/* 
+* For pop-up modals and bottom drawer modals we'll use the class adaptable-modal.
+* This class makes the modal-wrapper 
+*/
+
+.adaptable-modal {
+  .modal-wrapper {
+    background-color: var(
+      --ion-background-color
+    ); // Default theme background color
+    // OPTIONAL: Add some border radius
+    border-radius: 10px;
+    height: unset; // Remove the default height which is fixed to 100% by the Ionic styles
+    .ion-page {
+      contain: content; // Fix the contain property to show only the content of the inserted .ion-page element
+      position: unset; // Remove the position: absolute which is coming with the .ion-page element by default, so we can manipulate the modal content as a regular div.
+    }
+  }
+}
+
+/*
+* For bottom-drawer modals we'll use the class bottom-drawer which makes the modal align the items at the end of the page using flex.
+*/
+
+.bottom-drawer {
+  align-items: flex-end;
+  // OPTIONAL: Top corners rounded
+  .modal-wrapper {
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    padding-top: 15px;
+  }
+  .modal-wrapper::after {
+    background-color: var(--ion-color-medium);
+    border-color: var(--ion-color-medium);
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    content: "''";
+    height: 1px;
+    left: calc(50% - 20px);
+    position: absolute;
+    top: 10px;
+    width: 40px;
+  }
 }
 
 /* The following classes represent "standart" sizes for mobile and tablet devices.
 * 
-* NOTE: By default we set the modal max-height and max-width to be the full size 
-* of the screen. So if we don't add any size-class to the modal it will has the
+* NOTE: By default the modal-wrapper max-width is the full size 
+* of the screen. So if we don't add any custom-size-class to the modal it will has the
 * default behavior of a modal for devices which is being full-screen.
 *
 */
 
 // Extra small size
+.modal-xm {
+  .modal-wrapper {
+    max-width: 220px;
+    @media only screen and (min-width: 768px) and (min-height: 768px) {
+      max-width: 330px;
+    }
+  }
+}
 
 // Small size
 .modal-sm {
   .modal-wrapper {
-    max-height: 60%;
-    max-width: 80%;
+    max-width: 240px;
+    @media only screen and (min-width: 768px) and (min-height: 768px) {
+      max-width: 330px;
+    }
   }
 }
 
 // Medium size
-.modal-xs {
+.modal-md {
   .modal-wrapper {
-    max-height: 40%;
-    max-width: 60%;
+    max-width: 260px;
+    @media only screen and (min-width: 768px) and (min-height: 768px) {
+      max-width: 330px;
+    }
   }
 }
 
 // Large size
-.modal-bg-primary {
+.modal-lg {
   .modal-wrapper {
-    .ion-page {
-      background-color: var(--ion-color-primary);
+    max-width: 280px;
+    @media only screen and (min-width: 768px) and (min-height: 768px) {
+      max-width: 330px;
+    }
+  }
+}
+
+// Extra Large size
+.modal-xl {
+  .modal-wrapper {
+    max-width: 300px;
+    @media only screen and (min-width: 768px) and (min-height: 768px) {
+      max-width: 330px;
     }
   }
 }
