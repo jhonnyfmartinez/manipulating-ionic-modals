@@ -22,11 +22,11 @@ For this suggestion we will define 3 common use cases you may have in your proje
 - The pop-up modal
 - The bottom drawer modal
 
-Curiously Ionic Framework already has these 3 components very clear and specifically separate, ion-modal, ion-alert, ion-action-sheet. You can find them in the [Ionic Docs](https://ionicframework.com/docs/components).
+Curiously Ionic Framework already has these 3 components very clear and specifically separate, ion-modal, ion-alert, ion-action-sheet. You can find them in [Ionic Docs](https://ionicframework.com/docs/components).
 
 **Disclaimer**: Unfortunately, Ionic is too strict about customizing its core components, especially these 3, and here is **why** this post was created. Manipulate Ionic modals in order to create custom pop-ups and drawers. Sounds good, isn't it?
 
-<img height="auto" width="250px" src="public/live-example.gif" />
+<img height="auto" width="250px" src="https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/live-example.gif" />
 
 Live example
 
@@ -36,11 +36,11 @@ Just use the default way to create modals in Ionic and that's it. The only notab
 
 Code example:
 
-![public/default-modal-code-ts.png](public/default-modal-code-ts.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/default-modal-code-ts.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/default-modal-code-ts.png)
 
 Typescript
 
-![public/default-modal-code-html.png](public/default-modal-code-html.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/default-modal-code-html.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/default-modal-code-html.png)
 
 HTML
 
@@ -50,21 +50,21 @@ In this case (the most common one) we are looking for an alert/popup-like compon
 
 For the pop-up modal as well as the bottom-drawer modal we will use the **_.adaptable-modal_** class.
 
-![public/adaptable-modal-class.png](public/adaptable-modal-class.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/adaptable-modal-class.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/adaptable-modal-class.png)
 
 Adaptable modal class
 
 Depending on the project (actually the design team), you will customize the content size of your modal components as you need. Here are 5 common sizes you can use: **xs, sm, md, lg** and **xl.**
 
-![public/pop-up-modal-sm-scss.png](public/pop-up-modal-sm-scss.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-sm-scss.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-sm-scss.png)
 
 PopUp medium size modal class
 
-![public/pop-up-modal-md-view.png](public/pop-up-modal-md-view.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-md-view.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-md-view.png)
 
 PopUp medium size modal
 
-![public/pop-up-modal-sm-html.png](public/pop-up-modal-sm-html.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-sm-html.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-sm-html.png)
 
 Pop-up modal html
 
@@ -72,7 +72,7 @@ As you can see there is a slight difference in the pop-up width, here is where y
 
 Creating and opening a popup modal.
 
-![public/pop-up-modal-ts.png](public/pop-up-modal-ts.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-ts.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-ts.png)
 
 PopUp modal typescript
 
@@ -80,13 +80,13 @@ PopUp modal typescript
 
 The purpose of the bottom drawer is to allow users to close it by swiping it down. Android doesn't have this feature natively so we force the mode to be iOS. We also add the **swipeToClose** property to **true.** With the bottom-drawer class, we set the items inside the ion-modal component to be positioned at the bottom of the page and override the previously assigned width to 100%, in order to always fit the screen width, even on tablet screen size.
 
-![public/bottom-modal-drawer-scss.png](public/bottom-modal-drawer-scss.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/bottom-modal-drawer-scss.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/bottom-modal-drawer-scss.png)
 
 Bottom drawer class
 
 👈 **Optional:** Add the **after** pseudo-element to the modal wrapper. Create a top-bar indicator to visually let the user know that the bottom drawer is draggable.
 
-![public/pop-up-modal-md-ts.png](public/pop-up-modal-md-ts.png)
+![https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-md-ts.png](https://raw.githubusercontent.com/jhonny9550/manipulating-ionic-modals/main/public/pop-up-modal-md-ts.png)
 
 Bottom drawer modal typescript
 
@@ -94,4 +94,4 @@ Bottom drawer modal typescript
 
 Customizations can go as deep as we need, with this solution we tried to make modals less painful when you want to modify them, as well as integrate them in multiple ways to our projects.
 
-Any feedback, comment or story around this topic will be appreciate it and replied ☕
+Any feedback, comment, or story around this topic will be appreciated and replied ☕
