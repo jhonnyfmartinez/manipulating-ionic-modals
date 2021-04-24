@@ -7,7 +7,7 @@ Having this definition in mind we jump to a question, what do we expect from a m
 
 **Answer:** Well, for Ionic Framework a modal will be a window that will use the whole screen size every time.
 
-But, we don't always need this fullscreen windows, sometimes we just need an alert/dialog, a popup, a drawer or we just want to highlight an image in the middle of the screen.
+But, we don't always need these fullscreen windows, sometimes we just need an alert/dialog, a popup, a drawer or we just want to highlight an image in the middle of the screen.
 
 There are two main behaviours that Ionic gives to its modal component.
 
@@ -24,15 +24,15 @@ For this suggestion we will define 3 common use cases you may have in your proje
 
 Curiously Ionic Framework already has these 3 components very clear and specifically separate, ion-modal, ion-alert, ion-action-sheet. You can find them in the [Ionic Docs](https://ionicframework.com/docs/components).
 
-**Disclaimer**: Unfortunately, Ionic is too strict about customising its core components, specially these 3, and here is **why** this post was created. Manipulate Ionic modals in order to create custom pop-ups and drawers. Sounds good, isn't?
+**Disclaimer**: Unfortunately, Ionic is too strict about customizing its core components, especially these 3, and here is **why** this post was created. Manipulate Ionic modals in order to create custom pop-ups and drawers. Sounds good, isn't it?
 
-<img src="public/live-example.gif" width="250" height="auto" />
+<img height="auto" width="250px" src="public/live-example.gif" />
 
 Live example
 
 ## Default modal
 
-For this particular case we won't discuss too much about it. Just use the default way to create modals in Ionic and that's it. The only notable change here is that we are forcing the ion-backdrop to appear in every single modal, which is different to the default behaviour (backdrop only for the first modal). You can see the backdrop becomes darker after each consecutive modal you open.
+Just use the default way to create modals in Ionic and that's it. The only notable change here is that we are forcing the ion-backdrop to appear in every single modal, which is different from the default behavior (backdrop only for the first modal). You can see the backdrop becomes darker after each consecutive modal you open.
 
 Code example:
 
@@ -46,7 +46,7 @@ HTML
 
 ## Pop-up modal
 
-In this case (the most common one) we are looking for an alert/popup-like component, where you can highlight a small piece of content and keep (or not?) the "dismiss on backdrop clicked" behaviour. In order to keep this options available we will keep using the modal instance options, in this case will be the **backdropDismiss** property, by default this prop is true so we don't have to change anything, but in case you don't want to dismiss the modal when the backdrop is clicked just set the property to false.
+In this case (the most common one) we are looking for an alert/popup-like component, where you can highlight a small piece of content and keep (or not?) the "dismiss on backdrop clicked" behavior. In order to keep these options available, we will keep using the modal instance options, in this case, will be the **backdropDismiss** property, by default this prop is true so we don't have to change anything, but in case you don't want to dismiss the modal when the backdrop is clicked just set the property to false.
 
 For the pop-up modal as well as the bottom-drawer modal we will use the **_.adaptable-modal_** class.
 
@@ -54,7 +54,7 @@ For the pop-up modal as well as the bottom-drawer modal we will use the **_.adap
 
 Adaptable modal class
 
-Depending on the project (actually the design team), you will customise the content size of your modal components as you need. Here are 5 common sizes you can use: **xs, sm, md, lg** and **xl.**
+Depending on the project (actually the design team), you will customize the content size of your modal components as you need. Here are 5 common sizes you can use: **xs, sm, md, lg** and **xl.**
 
 ![public/pop-up-modal-sm-scss.png](public/pop-up-modal-sm-scss.png)
 
@@ -68,7 +68,7 @@ PopUp medium size modal
 
 Pop-up modal html
 
-As you can see there is a slightly difference in the pop-up width, here is where you customise sizes as much as you need.
+As you can see there is a slight difference in the pop-up width, here is where you customize sizes as much as you need.
 
 Creating and opening a popup modal.
 
@@ -78,7 +78,7 @@ PopUp modal typescript
 
 ## Bottom drawer
 
-The purpose of the bottom drawer is allow users to close it swiping it down. Android doesn't has this feature natively so we force the mode to be iOS. We also add the **swipeToClose** property to **true.** With the bottom-drawer class we set the items inside the ion-modal component to be positioned at the bottom of the page and override the previous assigned width to 100%, in order to always fit the screen width, even on tablet screen size.
+The purpose of the bottom drawer is to allow users to close it by swiping it down. Android doesn't have this feature natively so we force the mode to be iOS. We also add the **swipeToClose** property to **true.** With the bottom-drawer class, we set the items inside the ion-modal component to be positioned at the bottom of the page and override the previously assigned width to 100%, in order to always fit the screen width, even on tablet screen size.
 
 ![public/bottom-modal-drawer-scss.png](public/bottom-modal-drawer-scss.png)
 
@@ -92,6 +92,6 @@ Bottom drawer modal typescript
 
 ## Conclusions
 
-Customisations can go as deep as we need, with this solution we tried to make modals less paining when you want to modify them, as well as integrate them in multiple ways to our projects.
+Customizations can go as deep as we need, with this solution we tried to make modals less painful when you want to modify them, as well as integrate them in multiple ways to our projects.
 
 Any feedback, comment or story around this topic will be appreciate it and replied ☕
