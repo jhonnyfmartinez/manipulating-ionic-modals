@@ -26,13 +26,8 @@ export class HomePage {
     const modal = await this.modalCtrl.create({
       component: PopUpPage,
       // Add the adaptable-modal class will give the modal a pop-up behaviour.
-      // It'll have a full width by default so we also add the custom-size class as we need to avoid full-size.
-      cssClass: 'adaptable-modal modal-xl'
-      // Multiple modal sizes
-      // cssClass: 'adaptable-modal modal-xs'
-      // cssClass: 'adaptable-modal modal-sm'
-      // cssClass: 'adaptable-modal modal-md'
-      // cssClass: 'adaptable-modal modal-lg'
+      // It'll have a full width by default so we also add the modal-{size} class as we need to avoid full-size.
+      cssClass: 'adaptable-modal'
     });
     await modal.present();
   }

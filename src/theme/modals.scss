@@ -25,18 +25,20 @@ ion-modal {
 * For pop-up modals and bottom drawer modals we'll use the class adaptable-modal.
 * This class makes the modal-wrapper 
 */
-
 .adaptable-modal {
   .modal-wrapper {
     background-color: var(
       --ion-background-color
     ); // Default theme background color
-    // OPTIONAL: Add some border radius
-    border-radius: 10px;
+    border-radius: 10px; // OPTIONAL: Add some border radius
     height: unset; // Remove the default height which is fixed to 100% by the Ionic styles
+    max-width: fit-content; // Leave the max-width to fit its content
     .ion-page {
-      contain: content; // Fix the contain property to show only the content of the inserted .ion-page element
-      position: unset; // Remove the position: absolute which is coming with the .ion-page element by default, so we can manipulate the modal content as a regular div.
+      // Fix the contain property to show only the content of the inserted .ion-page element
+      contain: content;
+      // Remove the position: absolute which is coming with the .ion-page element by default,
+      // so we can manipulate the modal content as a regular div.
+      position: unset;
     }
   }
 }
@@ -44,7 +46,6 @@ ion-modal {
 /*
 * For bottom-drawer modals we'll use the class bottom-drawer which makes the modal align the items at the end of the page using flex.
 */
-
 .bottom-drawer {
   align-items: flex-end;
   // OPTIONAL: Top corners rounded
@@ -52,6 +53,7 @@ ion-modal {
     border-radius: 30px 30px 0 0;
     position: relative;
     padding-top: 15px;
+    width: 100%;
   }
   .modal-wrapper::after {
     background-color: var(--ion-color-medium);
@@ -70,58 +72,49 @@ ion-modal {
 
 /* The following classes represent "standart" sizes for mobile and tablet devices.
 * 
-* NOTE: By default the modal-wrapper max-width is the full size 
-* of the screen. So if we don't add any custom-size-class to the modal it will has the
-* default behavior of a modal for devices which is being full-screen.
+* NOTE: By default the modal-wrapper max-width will fit the content. 
+* So, if we don't add any custom-size class to the first element inside 
+* the component passed to the modal it will has the
+* default behavior of a modal for devices which is being full-width.
 *
 */
 
 // Extra small size
 .modal-xm {
-  .modal-wrapper {
-    max-width: 220px;
-    @media only screen and (min-width: 768px) and (min-height: 768px) {
-      max-width: 320px;
-    }
+  max-width: 220px;
+  @media only screen and (min-width: 768px) and (min-height: 768px) {
+    max-width: 320px;
   }
 }
 
 // Small size
 .modal-sm {
-  .modal-wrapper {
-    max-width: 240px;
-    @media only screen and (min-width: 768px) and (min-height: 768px) {
-      max-width: 360px;
-    }
+  max-width: 240px;
+  @media only screen and (min-width: 768px) and (min-height: 768px) {
+    max-width: 360px;
   }
 }
 
 // Medium size
 .modal-md {
-  .modal-wrapper {
-    max-width: 260px;
-    @media only screen and (min-width: 768px) and (min-height: 768px) {
-      max-width: 400px;
-    }
+  max-width: 260px;
+  @media only screen and (min-width: 768px) and (min-height: 768px) {
+    max-width: 400px;
   }
 }
 
 // Large size
 .modal-lg {
-  .modal-wrapper {
-    max-width: 280px;
-    @media only screen and (min-width: 768px) and (min-height: 768px) {
-      max-width: 440px;
-    }
+  max-width: 280px;
+  @media only screen and (min-width: 768px) and (min-height: 768px) {
+    max-width: 440px;
   }
 }
 
 // Extra Large size
 .modal-xl {
-  .modal-wrapper {
-    max-width: 300px;
-    @media only screen and (min-width: 768px) and (min-height: 768px) {
-      max-width: 480px;
-    }
+  max-width: 300px;
+  @media only screen and (min-width: 768px) and (min-height: 768px) {
+    max-width: 480px;
   }
 }
