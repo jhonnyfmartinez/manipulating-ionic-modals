@@ -26,7 +26,7 @@ Curiously Ionic Framework already has these 3 components very clear and specific
 
 **Disclaimer**: Unfortunately, Ionic is too strict about customising its core components, specially these 3, and here is **why** this post was created. Manipulate Ionic modals in order to create custom pop-ups and drawers. Sounds good, isn't?
 
-![public/live-example.gif](public/live-example.gif)
+<img src="public/live-example.gif" width="250" height="auto" />
 
 Live example
 
