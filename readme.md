@@ -16,9 +16,7 @@ There are two main behaviours that Ionic gives to its modal component.
 
 At this point you've to be aware that we won't stick to iOS or Android, we will use the best of both in case we need, or why not, avoid using them.
 
-**_TODO: Add a list of discovered problems HERE 👇_**
-
-For this project we will define 3 common use cases you may have in your project.
+For this suggestion we will define 3 common use cases you may have in your project.
 
 - The default modal (which is the way Ionic likes)
 - The pop-up modal
